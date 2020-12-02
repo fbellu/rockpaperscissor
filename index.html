@@ -3,6 +3,24 @@
     <head>
         <meta charset="utf-8">
         <script>
+            function getRandomIntInclusive(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min; //Il max è incluso e il min è incluso 
+              }
+            function computerPlay() {
+                let play = getRandomIntInclusive(1,3);
+                let returnVal = "";
+                switch (play) {
+                    case 1:
+                        returnVal = "Rock";
+                    case 2:
+                        returnVal = "Paper";
+                    case 3:
+                        returnVal = "Scissors";
+                }
+                return returnVal;
+            }
         </script>
     </head>
     <body>
