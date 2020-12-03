@@ -42,12 +42,36 @@
 
             }
 
+            function roundWinner(pPlay, cPlay) {
+                if (pPlay != cPlay) {
+                    if ((pPlay == 1 && cPlay == 3) ||
+                        (pPlay == 2 && cPlay == 1) ||
+                        (pPlay == 3 && cPlay == 2)) {
+                            return 1;
+                        }
+                    else {
+                        return 2;
+                    }
+                } else {
+                    return 0;
+                }
+            }
+
             function test() {
+                const play = ["Error","Rock","Paper","Scissor"];
+                const winner = ["DRAW","PLAYER","BOT"];
                 let pPlay = playerPlay();
                 let cPlay = computerPlay();
+                let rWin = roundWinner(pPlay,cPlay);
 
-                console.log(pPlay);
-                console.log(cPlay);
+                if (play[pPlay] == "Error") {
+                    console.log("Error: Play is not valid!");
+                } else {
+                    console.log(play[pPlay]);
+                    console.log(play[cPlay]);
+                    console.log(winner[rWin]);
+                }
+
             }   
 
             test();
