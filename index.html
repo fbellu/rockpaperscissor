@@ -23,7 +23,7 @@
             } 
             function playerPlay() {
                 let play = prompt("Select your play: ", "")
-                let returnVal = "";
+                let returnVal = 0;
 
                 switch (play.toLowerCase()) {
                     case "rock":
@@ -32,13 +32,22 @@
                         returnVal = 2;
                     case "scissor":
                         returnVal = 3;
-                    default:
-                        returnVal = 0;
+                //    default:
+                //        returnVal = 0;
                 } 
                 return returnVal;
 
             }
 
+            function test() {
+                let pPlay = playerPlay();
+                let cPlay = computerPlay();
+
+                console.log(pPlay);
+                console.log(cPlay);
+            }   
+
+            test();
             
         </script>
     </head>
