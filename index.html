@@ -107,7 +107,19 @@
 
             }
 
-            game();
+            function mainMenu() {
+                let play = true;
+                while (play){
+                    game();
+                    let replay = "";
+                    while (replay != "y" && replay != "n"){
+                        replay = prompt("Replay? y/n");
+                    }
+
+                    if(replay == "n") play=false; 
+
+                }
+            }
 
 
 //            function test() {
