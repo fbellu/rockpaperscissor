@@ -23,17 +23,20 @@
             } 
             function playerPlay() {
                 let play = prompt("Select your play: ", "")
-                let returnVal = 0;
+                let returnVal;
 
                 switch (play.toLowerCase()) {
                     case "rock":
                         returnVal = 1;
+                        break;
                     case "paper":
                         returnVal = 2;
+                        break;
                     case "scissor":
                         returnVal = 3;
-                //    default:
-                //        returnVal = 0;
+                        break;
+                    default:
+                        returnVal = 0;
                 } 
                 return returnVal;
 
