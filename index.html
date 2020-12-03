@@ -57,6 +57,30 @@
                 }
             }
             
+            function playRound() {
+                const plays = ["Error","Rock","Paper","Scissor"];
+                let pPlay = playerPlay();
+                if (pPlay == 0) {
+                    console.log("Error: Play is not valid!");
+                    return -1;
+                }
+                let cPlay = computerPlay();
+                let rWin = roundWinner(pPlay,cPlay);
+                
+                console.log("Player select: " + plays[pPlay]);
+                console.log("Computer select: " + plays[cPlay]);
+                switch (rWin) {
+                    case 0:
+                        console.log("It's a draw!");
+                    case 1:
+                        console.log("Yeah! Player win the round");
+                    case 2:
+                        console.log("Ouch ... bot wins this round");
+                }
+                
+                return rWin;
+            }
+
 
 //            function test() {
 //                const plays = ["Error","Rock","Paper","Scissor"];
